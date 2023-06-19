@@ -1,5 +1,8 @@
 const transform = async () => {
-    // Write your code here 
+    process.stdin.on('data', data => {
+        data.reverse();
+        process.stdout.write(`${data}\n`);
+    })
 };
 
 await transform();
